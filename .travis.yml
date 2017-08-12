@@ -4,6 +4,7 @@ jdk:
 script:
   - gradle build
 before_deploy:
+  - mv build/libs/ROOT.war ROOT.war
   - zip deploy.zip ROOT.war
   - zip -u deploy.zip scripts/*
   - zip -u deploy.zip appspec.yml
