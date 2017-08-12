@@ -1,0 +1,10 @@
+#Dirs
+/build/
+/bin/
+.gradle/
+
+#File type
+.DS_Store
+*.class
+*.jar
+*.war
