@@ -21,3 +21,14 @@ deploy:
     region: ap-northeast-1
     on:
       branch: master
+  - provider: codedeploy
+    bucket: lab-online-bucket
+    access_key_id: $ACCESS_KEY_ID
+    secret_access_key:
+      secure: $SECRET_ACCESS_KEY
+    key: deploy.zip
+    application: lab-online-codedeploy-application
+    deployment_group: lab-online-codedeploy-group
+    region: ap-northeast-1
+    on:
+      branch: master
