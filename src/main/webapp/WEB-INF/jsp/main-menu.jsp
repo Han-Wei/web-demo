@@ -3,7 +3,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags"%>
 <t:base>
 <div class="jumbotron" style="padding:50px">
-  <h1>Hello, this is a demo web page</h1>
+  <h1>Hello, this is my web page demo</h1>
   this is a demo message
 </div>
 </t:base>
