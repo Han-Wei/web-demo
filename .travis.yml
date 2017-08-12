@@ -4,11 +4,11 @@ jdk:
 script:
   - gradle build
 before_deploy:
-  zip deploy.zip ROOT.war
-  zip -u deploy.zip scripts/*
-  zip -u deploy.zip appspec.yml
-  test -d result || mkdir result
-  mv deploy.zip result/
+  - zip deploy.zip ROOT.war
+  - zip -u deploy.zip scripts/*
+  - zip -u deploy.zip appspec.yml
+  - test -d result || mkdir result
+  - mv deploy.zip result/
 deploy:
   - provider: s3
     bucket: lab-online-bucket
