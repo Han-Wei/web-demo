@@ -7,15 +7,15 @@ before_deploy:
   zip deploy.zip ROOT.war
   zip -u deploy.zip scripts/*
   zip -u deploy.zip appspec.yml
-  test -d deploy || mkdir deploy
-  mv deploy.zip deploy
+  test -d result || mkdir result
+  mv deploy.zip result/
 deploy:
   - provider: s3
     bucket: lab-online-bucket
     access_key_id: $ACCESS_KEY_ID
     secret_access_key:
       secure: $SECRET_ACCESS_KEY
-    local_dir: deploy
+    local_dir: results
     skip_cleanup: true
     region: ap-northeast-1
     on:
